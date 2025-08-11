@@ -52,7 +52,7 @@
     variant.onload  = function() { return callback(true);  }
     variant.onerror = function() { return callback(false); }
 	
-    variant.src = this.at_2x_path;
+    // variant.src = this.at_2x_path;
   }
   RetinaImagePath.prototype.check_2x_variant = function(callback) {
     var that = this;	

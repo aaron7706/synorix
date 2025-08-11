@@ -23,6 +23,7 @@
 	<link rel="stylesheet" type="text/css" href="css/vendor/owl-carousel/carousel.css">
 	<!-- CUSTOM CSS -->
 	<link rel="stylesheet" type="text/css" href="css/custom/style.css">
+	<script src="js/language.js"></script>
 </head>
 
 <body data-spy="scroll" data-target="#navbarSupportedContent" data-offset="100">
@@ -32,8 +33,7 @@
 		id="top-nav">
 		<div class="container">
 			<div class="logo-image">
-				<a href="index.html#"><img src="images/synorix_logo.png" alt="logo-image"
-						data-at2x="images/200x80x1@2x.png" /></a>
+				<a href="index.html#"><img src="images/synorix_logo.png" alt="logo-image" /></a>
 			</div>
 			<div class="navbar-right nav">
 				<div class="navbar-header">
@@ -46,31 +46,31 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="nav navbar-nav" id="menu_1">
 						<li class="menu">
-							<a href="#home" class="pagescroll nav-link">
+							<a href="#home" class="pagescroll nav-link" data-i18n="home">
 								HOME
 							</a>
 						</li>
 
 						<li class="menu">
-							<a href="#about" class="pagescroll nav-link">
+							<a href="#about" class="pagescroll nav-link" data-i18n="about_us">
 								ABOUT US
 							</a>
 						</li>
 
 
 						<li class="menu">
-							<a href="#services" class="pagescroll nav-link">
+							<a href="#services" class="pagescroll nav-link" data-i18n="SERVICES">
 								SERVICES
 							</a>
 						</li>
 
 						<li class="menu">
-							<a href="#features" class="pagescroll nav-link">
+							<a href="#features" class="pagescroll nav-link" data-i18n="FEATURES">
 								FEATURES
 							</a>
 						</li>
 						<li class="menu">
-							<a href="#gallery" class="pagescroll nav-link">
+							<a href="#gallery" class="pagescroll nav-link" data-i18n="DIGITAL_GUIDE">
 								DIGITAL GUIDE
 							</a>
 						</li>
@@ -81,11 +81,381 @@
 						</li> -->
 
 						<li class="menu">
-							<a href="#contact" class="pagescroll nav-link">
+							<a href="#contact" class="pagescroll nav-link" data-i18n="CONTACT">
 								CONTACT
 							</a>
 						</li>
+						<li class="menu">
+							<div class="custom-dropdown deskdn" id="customDropdown">
+								<div class="dropdown-selected" id="dropdownSelected">
+									<img id="selectedFlag" src="/images/country/US.webp" alt="Selected Flag" />
+									<span id="selectedLanguage">English</span>
+									<i class="arrow-down"></i>
+								</div>
+								<div class="dropdown-options" id="dropdownOptions">
+									<div class="dropdown-option" data-value="En" data-flag="/images/country/US.webp">
+										<img src="/images/country/US.webp" alt="English Flag" /> English
+									</div>
+									<div class="dropdown-option" data-value="Bd" data-flag="/images/country/BD.webp">
+										<img src="/images/country/BD.webp" alt="Bangla Flag" /> Bangla
+									</div>
+									<div class="dropdown-option" data-value="Ar"
+										data-flag="/images/country/arabic.webp">
+										<img src="/images/country/arabic.webp" style="border-radius: 50%;"
+											alt="Arabic Flag" />
+										Arabic
+									</div>
+									<div class="dropdown-option" data-value="Zu" data-flag="/images/country/zulu.webp">
+										<img src="/images/country/zulu.webp" style="border-radius: 50%;"
+											alt="Zulu Flag" /> Zulu
+									</div>
+									<!-- <div class="dropdown-option" data-value="Af" data-flag="/images/Bd.webp">
+										<img src="/images/BD.webp" style="border-radius: 50%;" alt="Afrikaans Flag" /> Afrikaans
+									</div> -->
+									<div class="dropdown-option" data-value="Es"
+										data-flag="/images/country/spanish.webp">
+										<img src="/images/country/spanish.webp" style="border-radius: 50%;"
+											alt="Spanish Flag" /> Spanish
+									</div>
+									<div class="dropdown-option" data-value="Pt"
+										data-flag="/images/country/Portuguese.webp">
+										<img src="/images/country/Portuguese.webp" style="border-radius: 50%;"
+											alt="Portuguese Flag" /> Portuguese
+									</div>
+									<div class="dropdown-option" data-value="Id"
+										data-flag="/images/country/Indonesian.webp">
+										<img src="/images/country/Indonesian.webp" style="border-radius: 50%;"
+											alt="Indonesian Flag" /> Indonesian
+									</div>
+									<div class="dropdown-option" data-value="Ms" data-flag="/images/country/Malay.webp">
+										<img src="/images/country/Malay.webp" style="border-radius: 50%;"
+											alt="Malay Flag" />
+										Malay
+									</div>
+									<div class="dropdown-option" data-value="Fil"
+										data-flag="/images/country/Filipino.webp">
+										<img src="/images/country/Filipino.webp" style="border-radius: 50%;"
+											alt="Filipino Flag" /> Filipino
+									</div>
+									<div class="dropdown-option" data-value="Ko"
+										data-flag="/images/country/Korean.webp">
+										<img src="/images/country/Korean.webp" style="border-radius: 50%;"
+											alt="Korean Flag" />
+										Korean
+									</div>
+									<div class="dropdown-option" data-value="Zh"
+										data-flag="/images/country/Mandarin.webp">
+										<img src="/images/country/Mandarin.webp" style="border-radius: 50%;"
+											alt="Mandarin Flag" /> Mandarin
+									</div>
+									<div class="dropdown-option" data-value="Th" data-flag="/images/country/Thai.webp">
+										<img src="/images/country/Thai.webp" style="border-radius: 50%;"
+											alt="Thai Flag" /> Thai
+									</div>
+									<div class="dropdown-option" data-value="Ga"
+										data-flag="/images/country/Irish-Gaelic.webp">
+										<img src="/images/country/Irish-Gaelic.webp" style="border-radius: 50%;"
+											alt="Irish Flag" />
+										Irish
+									</div>
+									<div class="dropdown-option" data-value="Nl" data-flag="/images/country/Dutch.webp">
+										<img src="/images/country/Dutch.webp" style="border-radius: 50%;"
+											alt="Dutch Flag" />
+										Dutch
+									</div>
+									<div class="dropdown-option" data-value="Bs"
+										data-flag="/images/country/Bosnian.webp">
+										<img src="/images/country/Bosnian.webp" style="border-radius: 50%;"
+											alt="Bosnian Flag" /> Bosnian
+									</div>
+									<div class="dropdown-option" data-value="Bg"
+										data-flag="/images/country/Bulgarian.webp">
+										<img src="/images/country/Bulgarian.webp" style="border-radius: 50%;"
+											alt="Bulgarian Flag" /> Bulgarian
+									</div>
+									<div class="dropdown-option" data-value="Hr"
+										data-flag="/images/country/Croatian.webp">
+										<img src="/images/country/Croatian.webp" style="border-radius: 50%;"
+											alt="Croatian Flag" /> Croatian
+									</div>
+									<div class="dropdown-option" data-value="Cs" data-flag="/images/country/Czech.webp">
+										<img src="/images/country/Czech.webp" style="border-radius: 50%;"
+											alt="Czech Flag" />
+										Czech
+									</div>
+									<div class="dropdown-option" data-value="Da"
+										data-flag="/images/country/Danish.webp">
+										<img src="/images/country/Danish.webp" style="border-radius: 50%;"
+											alt="Danish Flag" />
+										Danish
+									</div>
+									<div class="dropdown-option" data-value="Et"
+										data-flag="/images/country/Estonian.webp">
+										<img src="/images/country/Estonian.webp" style="border-radius: 50%;"
+											alt="Estonian Flag" /> Estonian
+									</div>
+									<div class="dropdown-option" data-value="Fi"
+										data-flag="/images/country/Finnish.webp">
+										<img src="/images/country/Finnish.webp" style="border-radius: 50%;"
+											alt="Finnish Flag" /> Finnish
+									</div>
+									<div class="dropdown-option" data-value="De"
+										data-flag="/images/country/German.webp">
+										<img src="/images/country/German.webp" style="border-radius: 50%;"
+											alt="German Flag" />
+										German
+									</div>
+									<div class="dropdown-option" data-value="Hu"
+										data-flag="/images/country/Hungarian.webp">
+										<img src="/images/country/Hungarian.webp" style="border-radius: 50%;"
+											alt="Hungarian Flag" /> Hungarian
+									</div>
+									<div class="dropdown-option" data-value="Is"
+										data-flag="/images/country/Icelandic.webp">
+										<img src="/images/country/Icelandic.webp" style="border-radius: 50%;"
+											alt="Icelandic Flag" /> Icelandic
+									</div>
+									<div class="dropdown-option" data-value="It"
+										data-flag="/images/country/Italian.webp">
+										<img src="/images/country/Italian.webp" style="border-radius: 50%;"
+											alt="Italian Flag" /> Italian
+									</div>
+									<div class="dropdown-option" data-value="Lv"
+										data-flag="/images/country/Latvian.webp">
+										<img src="/images/country/Latvian.webp" style="border-radius: 50%;"
+											alt="Latvian Flag" /> Latvian
+									</div>
+									<div class="dropdown-option" data-value="Lt"
+										data-flag="/images/country/Lithuanian.webp">
+										<img src="/images/country/Lithuanian.webp" style="border-radius: 50%;"
+											alt="Lithuanian Flag" /> Lithuanian
+									</div>
+									<div class="dropdown-option" data-value="Lb"
+										data-flag="/images/country/Luxembourgish.webp">
+										<img src="/images/country/Luxembourgish.webp" style="border-radius: 50%;"
+											alt="Luxembourgish Flag" />
+										Luxembourgish
+									</div>
+									<div class="dropdown-option" data-value="Mk"
+										data-flag="/images/country/Macedonian.webp">
+										<img src="/images/country/Macedonian.webp" style="border-radius: 50%;"
+											alt="Macedonian Flag" /> Macedonian
+									</div>
+									<div class="dropdown-option" data-value="Mt"
+										data-flag="/images/country/Maltese.webp">
+										<img src="/images/country/Maltese.webp" style="border-radius: 50%;"
+											alt="Maltese Flag" /> Maltese
+									</div>
+									<div class="dropdown-option" data-value="Ro"
+										data-flag="/images/country/Romanian.webp">
+										<img src="/images/country/Romanian.webp" style="border-radius: 50%;"
+											alt="Romanian Flag" /> Romanian
+									</div>
+									<div class="dropdown-option" data-value="Sr"
+										data-flag="/images/country/Montenegrin.webp">
+										<img src="/images/country/Montenegrin.webp" style="border-radius: 50%;"
+											alt="Montenegrin Flag" />
+										Montenegrin
+									</div>
+									<div class="dropdown-option" data-value="No"
+										data-flag="/images/country/Norwegian.webp">
+										<img src="/images/country/Norwegian.webp" style="border-radius: 50%;"
+											alt="Norwegian Flag" /> Norwegian
+									</div>
+									<div class="dropdown-option" data-value="Pl"
+										data-flag="/images/country/Polish.webp">
+										<img src="/images/country/Polish.webp" style="border-radius: 50%;"
+											alt="Polish Flag" />
+										Polish
+									</div>
+									<div class="dropdown-option" data-value="Sk"
+										data-flag="/images/country/Slovak.webp">
+										<img src="/images/country/Slovak.webp" style="border-radius: 50%;"
+											alt="Slovak Flag" />
+										Slovak
+									</div>
+									<div class="dropdown-option" data-value="Sv"
+										data-flag="/images/country/Swedish.webp">
+										<img src="/images/country/Swedish.webp" style="border-radius: 50%;"
+											alt="Swedish Flag" /> Swedish
+									</div>
+									<div class="dropdown-option" data-value="Uk"
+										data-flag="/images/country/Ukrainian.webp">
+										<img src="/images/country/Ukrainian.webp" style="border-radius: 50%;"
+											alt="Ukrainian Flag" /> Ukrainian
+									</div>
+									<div class="dropdown-option" data-value="Fr"
+										data-flag="/images/country/French.webp">
+										<img src="/images/country/French.webp" style="border-radius: 50%;"
+											alt="French Flag" />
+										French
+									</div>
+									<div class="dropdown-option" data-value="Ru"
+										data-flag="/images/country/Russian.webp">
+										<img src="/images/country/Russian.webp" style="border-radius: 50%;"
+											alt="Russian Flag" /> Russian
+									</div>
+								</div>
+							</div>
+
+						</li>
 					</ul>
+				</div>
+			</div>
+			<div class="custom-dropdown mobdn" id="customDropdown1">
+				<div class="dropdown-selected" id="dropdownSelected1">
+					<img id="selectedFlag1" src="/images/country/US.webp" alt="Selected Flag" />
+					<span id="selectedLanguage1">English</span>
+					<i class="arrow-down"></i>
+				</div>
+				<div class="dropdown-options" id="dropdownOptions1">
+					<div class="dropdown-option" data-value="En" data-flag="/images/country/US.webp">
+						<img src="/images/country/US.webp" alt="English Flag" /> English
+					</div>
+					<div class="dropdown-option" data-value="Bd" data-flag="/images/country/BD.webp">
+						<img src="/images/country/BD.webp" alt="Bangla Flag" /> Bangla
+					</div>
+					<div class="dropdown-option" data-value="Ar" data-flag="/images/country/arabic.webp">
+						<img src="/images/country/arabic.webp" style="border-radius: 50%;" alt="Arabic Flag" /> Arabic
+					</div>
+					<div class="dropdown-option" data-value="Zu" data-flag="/images/country/zulu.webp">
+						<img src="/images/country/zulu.webp" style="border-radius: 50%;" alt="Zulu Flag" /> Zulu
+					</div>
+					<!-- <div class="dropdown-option" data-value="Af" data-flag="/images/Bd.webp">
+					<img src="/images/BD.webp" style="border-radius: 50%;" alt="Afrikaans Flag" /> Afrikaans
+				</div> -->
+					<div class="dropdown-option" data-value="Es" data-flag="/images/country/spanish.webp">
+						<img src="/images/country/spanish.webp" style="border-radius: 50%;" alt="Spanish Flag" />
+						Spanish
+					</div>
+					<div class="dropdown-option" data-value="Pt" data-flag="/images/country/Portuguese.webp">
+						<img src="/images/country/Portuguese.webp" style="border-radius: 50%;" alt="Portuguese Flag" />
+						Portuguese
+					</div>
+					<div class="dropdown-option" data-value="Id" data-flag="/images/country/Indonesian.webp">
+						<img src="/images/country/Indonesian.webp" style="border-radius: 50%;" alt="Indonesian Flag" />
+						Indonesian
+					</div>
+					<div class="dropdown-option" data-value="Ms" data-flag="/images/country/Malay.webp">
+						<img src="/images/country/Malay.webp" style="border-radius: 50%;" alt="Malay Flag" /> Malay
+					</div>
+					<div class="dropdown-option" data-value="Fil" data-flag="/images/country/Filipino.webp">
+						<img src="/images/country/Filipino.webp" style="border-radius: 50%;" alt="Filipino Flag" />
+						Filipino
+					</div>
+					<div class="dropdown-option" data-value="Ko" data-flag="/images/country/Korean.webp">
+						<img src="/images/country/Korean.webp" style="border-radius: 50%;" alt="Korean Flag" /> Korean
+					</div>
+					<div class="dropdown-option" data-value="Zh" data-flag="/images/country/Mandarin.webp">
+						<img src="/images/country/Mandarin.webp" style="border-radius: 50%;" alt="Mandarin Flag" />
+						Mandarin
+					</div>
+					<div class="dropdown-option" data-value="Th" data-flag="/images/country/Thai.webp">
+						<img src="/images/country/Thai.webp" style="border-radius: 50%;" alt="Thai Flag" /> Thai
+					</div>
+					<div class="dropdown-option" data-value="Ga" data-flag="/images/country/Irish-Gaelic.webp">
+						<img src="/images/country/Irish-Gaelic.webp" style="border-radius: 50%;" alt="Irish Flag" />
+						Irish
+					</div>
+					<div class="dropdown-option" data-value="Nl" data-flag="/images/country/Dutch.webp">
+						<img src="/images/country/Dutch.webp" style="border-radius: 50%;" alt="Dutch Flag" /> Dutch
+					</div>
+					<div class="dropdown-option" data-value="Bs" data-flag="/images/country/Bosnian.webp">
+						<img src="/images/country/Bosnian.webp" style="border-radius: 50%;" alt="Bosnian Flag" />
+						Bosnian
+					</div>
+					<div class="dropdown-option" data-value="Bg" data-flag="/images/country/Bulgarian.webp">
+						<img src="/images/country/Bulgarian.webp" style="border-radius: 50%;" alt="Bulgarian Flag" />
+						Bulgarian
+					</div>
+					<div class="dropdown-option" data-value="Hr" data-flag="/images/country/Croatian.webp">
+						<img src="/images/country/Croatian.webp" style="border-radius: 50%;" alt="Croatian Flag" />
+						Croatian
+					</div>
+					<div class="dropdown-option" data-value="Cs" data-flag="/images/country/Czech.webp">
+						<img src="/images/country/Czech.webp" style="border-radius: 50%;" alt="Czech Flag" /> Czech
+					</div>
+					<div class="dropdown-option" data-value="Da" data-flag="/images/country/Danish.webp">
+						<img src="/images/country/Danish.webp" style="border-radius: 50%;" alt="Danish Flag" /> Danish
+					</div>
+					<div class="dropdown-option" data-value="Et" data-flag="/images/country/Estonian.webp">
+						<img src="/images/country/Estonian.webp" style="border-radius: 50%;" alt="Estonian Flag" />
+						Estonian
+					</div>
+					<div class="dropdown-option" data-value="Fi" data-flag="/images/country/Finnish.webp">
+						<img src="/images/country/Finnish.webp" style="border-radius: 50%;" alt="Finnish Flag" />
+						Finnish
+					</div>
+					<div class="dropdown-option" data-value="De" data-flag="/images/country/German.webp">
+						<img src="/images/country/German.webp" style="border-radius: 50%;" alt="German Flag" /> German
+					</div>
+					<div class="dropdown-option" data-value="Hu" data-flag="/images/country/Hungarian.webp">
+						<img src="/images/country/Hungarian.webp" style="border-radius: 50%;" alt="Hungarian Flag" />
+						Hungarian
+					</div>
+					<div class="dropdown-option" data-value="Is" data-flag="/images/country/Icelandic.webp">
+						<img src="/images/country/Icelandic.webp" style="border-radius: 50%;" alt="Icelandic Flag" />
+						Icelandic
+					</div>
+					<div class="dropdown-option" data-value="It" data-flag="/images/country/Italian.webp">
+						<img src="/images/country/Italian.webp" style="border-radius: 50%;" alt="Italian Flag" />
+						Italian
+					</div>
+					<div class="dropdown-option" data-value="Lv" data-flag="/images/country/Latvian.webp">
+						<img src="/images/country/Latvian.webp" style="border-radius: 50%;" alt="Latvian Flag" />
+						Latvian
+					</div>
+					<div class="dropdown-option" data-value="Lt" data-flag="/images/country/Lithuanian.webp">
+						<img src="/images/country/Lithuanian.webp" style="border-radius: 50%;" alt="Lithuanian Flag" />
+						Lithuanian
+					</div>
+					<div class="dropdown-option" data-value="Lb" data-flag="/images/country/Luxembourgish.webp">
+						<img src="/images/country/Luxembourgish.webp" style="border-radius: 50%;"
+							alt="Luxembourgish Flag" />
+						Luxembourgish
+					</div>
+					<div class="dropdown-option" data-value="Mk" data-flag="/images/country/Macedonian.webp">
+						<img src="/images/country/Macedonian.webp" style="border-radius: 50%;" alt="Macedonian Flag" />
+						Macedonian
+					</div>
+					<div class="dropdown-option" data-value="Mt" data-flag="/images/country/Maltese.webp">
+						<img src="/images/country/Maltese.webp" style="border-radius: 50%;" alt="Maltese Flag" />
+						Maltese
+					</div>
+					<div class="dropdown-option" data-value="Ro" data-flag="/images/country/Romanian.webp">
+						<img src="/images/country/Romanian.webp" style="border-radius: 50%;" alt="Romanian Flag" />
+						Romanian
+					</div>
+					<div class="dropdown-option" data-value="Sr" data-flag="/images/country/Montenegrin.webp">
+						<img src="/images/country/Montenegrin.webp" style="border-radius: 50%;"
+							alt="Montenegrin Flag" />
+						Montenegrin
+					</div>
+					<div class="dropdown-option" data-value="No" data-flag="/images/country/Norwegian.webp">
+						<img src="/images/country/Norwegian.webp" style="border-radius: 50%;" alt="Norwegian Flag" />
+						Norwegian
+					</div>
+					<div class="dropdown-option" data-value="Pl" data-flag="/images/country/Polish.webp">
+						<img src="/images/country/Polish.webp" style="border-radius: 50%;" alt="Polish Flag" /> Polish
+					</div>
+					<div class="dropdown-option" data-value="Sk" data-flag="/images/country/Slovak.webp">
+						<img src="/images/country/Slovak.webp" style="border-radius: 50%;" alt="Slovak Flag" /> Slovak
+					</div>
+					<div class="dropdown-option" data-value="Sv" data-flag="/images/country/Swedish.webp">
+						<img src="/images/country/Swedish.webp" style="border-radius: 50%;" alt="Swedish Flag" />
+						Swedish
+					</div>
+					<div class="dropdown-option" data-value="Uk" data-flag="/images/country/Ukrainian.webp">
+						<img src="/images/country/Ukrainian.webp" style="border-radius: 50%;" alt="Ukrainian Flag" />
+						Ukrainian
+					</div>
+					<div class="dropdown-option" data-value="Fr" data-flag="/images/country/French.webp">
+						<img src="/images/country/French.webp" style="border-radius: 50%;" alt="French Flag" /> French
+					</div>
+					<div class="dropdown-option" data-value="Ru" data-flag="/images/country/Russian.webp">
+						<img src="/images/country/Russian.webp" style="border-radius: 50%;" alt="Russian Flag" />
+						Russian
+					</div>
 				</div>
 			</div>
 			<!-- /.navbar-collapse -->
@@ -103,17 +473,16 @@
 					<div class="video-head">
 						<div class="col-sm-12 col-md-12 col-lg-8 column-center text-center no-pad">
 							<div class="header-div-1">
-								<p class="sub-head">Your Growth Partner in the Digital World </p>
-								<h1>DIGITAL MARKETING AGENCY</h1>
-								<p class="header-content">
+								<p class="sub-head" data-i18n="Your_Growth_Partner_in_the_Digital_World">Your Growth Partner in the Digital World </p>
+								<h1 data-i18n="DIGITAL_MARKETING_AGENCY">DIGITAL MARKETING AGENCY</h1>
+								<p class="header-content" data-i18n="We_are_a_fullservice_digital_marketing">
 									We are a full-service digital marketing agency committed to transforming businesses
 									into powerful digital brands. With a perfect blend of creativity, strategy, and
 									innovation, we help companies of all sizes thrive online.
 									<!-- From SEO and social media marketing to performance-driven campaigns and conversion optimization, we provide tailored solutions that drive real results. Our data-driven approach ensures every marketing dollar delivers maximum ROI. -->
 								</p>
 								<div class="pagescroll nav-link">
-									<p class="btn btn-1"><a href="#about" class="pagescroll nav-link">Boost Your Result
-											With Us</a></p>
+									<p class="btn btn-1"><a href="#about" class="pagescroll nav-link" data-i18n="Boost_Your_Result_With_Us">Boost Your Result With Us</a></p>
 								</div>
 							</div>
 						</div>
@@ -132,41 +501,41 @@
 					<div class="pad-right25">
 						<div class="abt-col">
 							<div class="abt-head">
-								<p class="abt-subhead">Accelerate. Elevate. Dominate</p>
+								<p class="abt-subhead" data-i18n="Accelerate_Elevate_Dominate">Accelerate. Elevate. Dominate</p>
 								<h3>WHAT WE ARE DOING</h3>
 							</div>
-							<p class="content-top-space">We are more than digital marketing agency in India
+							<p class="content-top-space" data-i18n="We_are_more_than_digital_marketing">We are more than digital marketing agency in India
 								Bangladesh: we listen and work together with you to achieve your goals and transform
 								your business. Stop listening to so-called “gurus” or overnight snake oil marketing –
 								use our
 								battle-tested strategies.
 							</p>
-							<p class="content-top-space">We boast an innovative, passionate, young and hungry
+							<p class="content-top-space" data-i18n="We_boast_an_innovative">We boast an innovative, passionate, young and hungry
 								advertising team that will work with you to create and execute cutting-edge strategies
 								that get results!</p>
 							<div class="about-points content-top-space1 distab">
 								<div class="distab-cell-middle">
 									<div class="distab-cell-middle list-img">
-										<img src="images/32x32x1.png" alt="icon" data-at2x="images/32x32x1@2x.png" />
+										<img src="images/32x32x1.png" alt="icon" />
 									</div>
 									<div class="distab-cell-middle list-content">
-										<p><a>BRANDING</a></p>
+										<p><a data-i18n="BRANDING">BRANDING</a></p>
 									</div>
 								</div>
 								<div class="distab-cell-middle abt-pad-left25">
 									<div class="distab-cell-middle list-img">
-										<img src="images/32x32x2.png" alt="icon" data-at2x="images/32x32x2@2x.png" />
+										<img src="images/32x32x2.png" alt="icon" />
 									</div>
 									<div class="distab-cell-middle list-content">
-										<p><a>MARKETING</a></p>
+										<p><a data-i18n="MARKETING">MARKETING</a></p>
 									</div>
 								</div>
 								<div class="distab-cell-middle abt-pad-left25">
 									<div class="distab-cell-middle list-img">
-										<img src="images/32x32x3.png" alt="icon" data-at2x="images/32x32x3@2x.png" />
+										<img src="images/32x32x3.png" alt="icon" />
 									</div>
 									<div class="distab-cell-middle list-content">
-										<p><a>PROMOTION</a></p>
+										<p><a data-i18n="PROMOTION">PROMOTION</a></p>
 									</div>
 								</div>
 							</div>
@@ -175,8 +544,7 @@
 				</div>
 				<div class="col-sm-12 col-md-12 col-lg-6 order-lg-2 order-1">
 					<div class="pad-left25">
-						<img src="images/760x565x1.jpg" alt="image" class="img-fluid"
-							data-at2x="images/760x565x1@2x.jpg" />
+						<img src="images/760x565x1.jpg" alt="image" class="img-fluid" />
 					</div>
 				</div>
 			</div>
@@ -189,20 +557,20 @@
 	<section class="section-padding section-2-bg" id="services">
 		<div class="container">
 			<div class="heading-div-1 text-center">
-				<h2>OUR SERVICES</h2>
+				<h2 data-i18n="OUR_SERVICES">OUR SERVICES</h2>
 				<div class="underline-ul text-center">
-					<img src="images/broken-line.png" alt="uline" data-at2x="images/110x16@2x.png" />
+					<img src="images/broken-line.png" alt="uline" />
 				</div>
 			</div>
 			<div class="row rowsafari">
 				<div class="col-sm-12 col-md-12 col-lg-4">
 					<div class="res-col-center res-services-center service-col-br">
-						<h4 class="content-bottom-space1"><a href="index.html#">SECURITY SERVICES</a></h4>
+						<h4 class="content-bottom-space1"><a href="index.html#" data-i18n="SECURITY_SERVICES">SECURITY SERVICES</a></h4>
 						<div class="distab-cell-top services-col-img">
-							<img src="images/80x80x1.png" alt="icon" data-at2x="images/80x80x1@2x.png" />
+							<img src="images/80x80x1.png" alt="icon" />
 						</div>
 						<div class="distab-cell-top services-col-content">
-							<p>Protect your digital assets with cutting-edge cybersecurity solutions. We secure your
+							<p data-i18n="Protect_your_digital_assets">Protect your digital assets with cutting-edge cybersecurity solutions. We secure your
 								data, websites, and transactions with industry-grade encryption and monitoring systems.
 							</p>
 						</div>
@@ -211,12 +579,12 @@
 				</div>
 				<div class="col-sm-12 col-md-12 col-lg-4 res-pad30">
 					<div class="res-col-center res-services-center service-col-br">
-						<h4 class="content-bottom-space1"><a href="index.html#">ONLINE MARKETING</a></h4>
+						<h4 class="content-bottom-space1"><a href="index.html#" data-i18n="ONLINE_MARKETING">ONLINE MARKETING</a></h4>
 						<div class="distab-cell-top services-col-img">
-							<img src="images/80x80x2.png" alt="icon" data-at2x="images/80x80x2@2x.png" />
+							<img src="images/80x80x2.png" alt="icon" />
 						</div>
 						<div class="distab-cell-top services-col-content">
-							<p>Drive traffic, increase engagement, and grow your brand presence with result-oriented
+							<p data-i18n="Drive_traffic_increase_engagement">Drive traffic, increase engagement, and grow your brand presence with result-oriented
 								digital marketing strategies including SEO, PPC, and social media.</p>
 						</div>
 					</div>
@@ -224,12 +592,12 @@
 				</div>
 				<div class="col-sm-12 col-md-12 col-lg-4 res-top30">
 					<div class="res-col-center res-services-center service-col-br">
-						<h4 class="content-bottom-space1"><a href="index.html#">MERCHANT PROCESSING</a></h4>
+						<h4 class="content-bottom-space1"><a href="index.html#" data-i18n="MERCHANT_PROCESSING">MERCHANT PROCESSING</a></h4>
 						<div class="distab-cell-top services-col-img">
-							<img src="images/80x80x3.png" alt="icon" data-at2x="images/80x80x3@2x.png" />
+							<img src="images/80x80x3.png" alt="icon" />
 						</div>
 						<div class="distab-cell-top services-col-content">
-							<p>Simplify your payment process with secure, fast, and flexible merchant solutions. Accept
+							<p data-i18n="Simplify_your_payment_process">Simplify your payment process with secure, fast, and flexible merchant solutions. Accept
 								payments online or offline with ease and full transparency.</p>
 						</div>
 					</div>
@@ -239,12 +607,12 @@
 			<div class="row rowsafari">
 				<div class="col-sm-12 col-md-12 col-lg-4 services-col-top">
 					<div class="res-col-center res-services-center res-service-col-br">
-						<h4 class="content-bottom-space1"><a href="index.html#">BUSINESS STRATEGY</a></h4>
+						<h4 class="content-bottom-space1"><a href="index.html#" data-i18n="BUSINESS_STRATEGY">BUSINESS STRATEGY</a></h4>
 						<div class="distab-cell-top services-col-img">
-							<img src="images/80x80x4.png" alt="icon" data-at2x="images/80x80x4@2x.png" />
+							<img src="images/80x80x4.png" alt="icon" />
 						</div>
 						<div class="distab-cell-top services-col-content">
-							<p>Turn insights into action with smart business strategies tailored to your industry. We
+							<p data-i18n="Turn_insights_into_action">Turn insights into action with smart business strategies tailored to your industry. We
 								help you plan, pivot, and scale with confidence.</p>
 						</div>
 					</div>
@@ -252,12 +620,12 @@
 				</div>
 				<div class="col-sm-12 col-md-12 col-lg-4 services-col-top">
 					<div class="res-col-center res-services-center res-service-col-br">
-						<h4 class="content-bottom-space1"><a href="index.html#">CUSTOM SERVICES</a></h4>
+						<h4 class="content-bottom-space1"><a href="index.html#" data-i18n="CUSTOM_SERVICES">CUSTOM SERVICES</a></h4>
 						<div class="distab-cell-top services-col-img">
-							<img src="images/80x80x5.png" alt="icon" data-at2x="images/80x80x5@2x.png" />
+							<img src="images/80x80x5.png" alt="icon" />
 						</div>
 						<div class="distab-cell-top services-col-content">
-							<p>Get solutions built around your unique business needs. From tailored software to
+							<p data-i18n="Get_solutions_built_around">Get solutions built around your unique business needs. From tailored software to
 								marketing campaigns, we create what your business demands.</p>
 						</div>
 					</div>
@@ -265,12 +633,12 @@
 				</div>
 				<div class="col-sm-12 col-md-12 col-lg-4 services-col-top">
 					<div class="res-col-center res-services-center">
-						<h4 class="content-bottom-space1"><a href="index.html#">BUSINESS SOLUTIONS</a></h4>
+						<h4 class="content-bottom-space1"><a href="index.html#" data-i18n="BUSINESS_SOLUTIONS">BUSINESS SOLUTIONS</a></h4>
 						<div class="distab-cell-top services-col-img">
-							<img src="images/80x80x6.png" alt="icon" data-at2x="images/80x80x6@2x.png" />
+							<img src="images/80x80x6.png" alt="icon" />
 						</div>
 						<div class="distab-cell-top services-col-content">
-							<p>Empower your operations with our full-spectrum business solutions—designed to streamline
+							<p data-i18n="Empower_your_operations_with">Empower your operations with our full-spectrum business solutions—designed to streamline
 								workflows, boost productivity, and maximize ROI.</p>
 						</div>
 					</div>
@@ -286,16 +654,15 @@
 	<section class="section-padding section-1-bg" id="features">
 		<div class="container">
 			<div class="heading-div-1 text-center">
-				<h2>OUR FEATURES</h2>
+				<h2 data-i18n="OUR_FEATURES">OUR FEATURES</h2>
 				<div class="underline-ul text-center">
-					<img src="images/broken-line.png" alt="uline" data-at2x="images/110x16@2x.png" />
+					<img src="images/broken-line.png" alt="uline" />
 				</div>
 			</div>
 			<div class="row rowsafari">
 				<div class="col-sm-12 col-md-12 col-lg-6">
 					<div class="pad-right25">
-						<img src="images/560x560x1.png" alt="image" class="img-fluid"
-							data-at2x="images/560x560x1@2x.png" />
+						<img src="images/560x560x1.png" alt="image" class="img-fluid" />
 					</div>
 				</div>
 				<div class="col-sm-12 col-md-12 col-lg-6 features-top">
@@ -303,44 +670,44 @@
 						<ul class="content-ul">
 							<li>
 								<div class="distab-cell-top features-col-img">
-									<img src="images/business1.png" alt="icon" data-at2x="images/90x90x1@2x.png" />
+									<img src="images/business1.png" alt="icon" />
 								</div>
 								<div class="distab-cell-middle">
-									<h4 class="heading-bottom-space"><a href="index.html#">BUSINESS ANALYSIS</a></h4>
-									<p>Unlock data-driven insights to refine your digital marketing strategies and drive
+									<h4 class="heading-bottom-space"><a href="index.html#" data-i18n="BUSINESS_ANALYSIS">BUSINESS ANALYSIS</a></h4>
+									<p data-i18n="Unlock_data_driven_insights">Unlock data-driven insights to refine your digital marketing strategies and drive
 										smarter decisions.
 									</p>
 								</div>
 							</li>
 							<li class="features-row-top">
 								<div class="distab-cell-top features-col-img">
-									<img src="images/financial1.png" alt="icon" data-at2x="images/90x90x2@2x.png" />
+									<img src="images/financial1.png" alt="icon" />
 								</div>
 								<div class="distab-cell-middle">
-									<h4 class="heading-bottom-space"><a href="index.html#">FINANCIAL ACTIVITY</a></h4>
-									<p>Track marketing spend with precision and optimize campaigns for maximum financial
+									<h4 class="heading-bottom-space"><a href="index.html#" data-i18n="FINANCIAL_ACTIVITY">FINANCIAL ACTIVITY</a></h4>
+									<p data-i18n="SERVICES">Track marketing spend with precision and optimize campaigns for maximum financial
 										ROI.
 									</p>
 								</div>
 							</li>
 							<li class="features-row-top">
 								<div class="distab-cell-top features-col-img">
-									<img src="images/dynamic1.png" alt="icon" data-at2x="images/90x90x3@2x.png" />
+									<img src="images/dynamic1.png" alt="icon" />
 								</div>
 								<div class="distab-cell-middle">
-									<h4 class="heading-bottom-space"><a href="index.html#">DYNAMIC IN NATURE</a></h4>
-									<p>Our strategies adapt in real-time to trends, ensuring your brand stays ahead in a
+									<h4 class="heading-bottom-space"><a href="index.html#" data-i18n="DYNAMIC_IN_NATURE">DYNAMIC IN NATURE</a></h4>
+									<p data-i18n="Our_strategies_adapt_in_real_time">Our strategies adapt in real-time to trends, ensuring your brand stays ahead in a
 										fast-paced digital world.
 									</p>
 								</div>
 							</li>
 							<li class="features-row-top">
 								<div class="distab-cell-top features-col-img">
-									<img src="images/support.png" alt="icon" data-at2x="images/90x90x4@2x.png" />
+									<img src="images/support.png" alt="icon" />
 								</div>
 								<div class="distab-cell-middle">
-									<h4 class="heading-bottom-space"><a href="index.html#">24/7 SUPPORT</a></h4>
-									<p>Stay supported around the clock with our dedicated team, ready to assist whenever
+									<h4 class="heading-bottom-space"><a href="index.html#" data-i18n="247_SUPPORT">24/7 SUPPORT</a></h4>
+									<p data-i18n="Stay_supported_around_the_clock">Stay supported around the clock with our dedicated team, ready to assist whenever
 										you need.
 									</p>
 								</div>
@@ -359,42 +726,42 @@
 			<div class="row rowsafari">
 				<div class="col-sm-12 col-md-12 col-lg-6">
 					<div class="pad-right25">
-						<h3>OUR VISION</h3>
+						<h3 data-i18n="OUR_VISION">OUR VISION</h3>
 						<div class="uline-img">
-							<img src="images/horizontal.png" alt="uline" data-at2x="images/50x6@2x.png" />
+							<img src="images/horizontal.png" alt="uline" />
 						</div>
 						<div class="content-top-space1">
-							<p class="mission-br">To become a trusted global leader in digital marketing by delivering
+							<p class="mission-br" data-i18n="To_become_a_trusted_global_leader">To become a trusted global leader in digital marketing by delivering
 								innovative, data-driven solutions that empower businesses to grow, engage, and thrive in
 								the digital world.
 							</p>
 						</div>
-						<p class="content-top-space1">“To revolutionize how businesses connect with customers online—by
+						<p class="content-top-space1" data-i18n="To_revolutionize_how_businesses">“To revolutionize how businesses connect with customers online—by
 							building meaningful, ROI-driven campaigns and long-term digital success.”
 						</p>
 						<div class="btn-top-space">
-							<p class="btn btn-1"><a href="index.html#">Read More</a></p>
+							<p class="btn btn-1"><a href="index.html#" data-i18n="Read_More">Read More</a></p>
 						</div>
 					</div>
 				</div>
 				<div class="col-sm-12 col-md-12 col-lg-6 res-top30">
 					<div class="pad-left25">
-						<h3>OUR MISSION</h3>
+						<h3 data-i18n="OUR_MISSION">OUR MISSION</h3>
 						<div class="uline-img">
-							<img src="images/horizontal.png" alt="uline" data-at2x="images/50x6@2x.png" />
+							<img src="images/horizontal.png" alt="uline" />
 						</div>
 						<div class="content-top-space1">
-							<p class="mission-br">To partner with businesses by providing transparent, result-oriented
+							<p class="mission-br" data-i18n="To_partner_with_businesses_by">To partner with businesses by providing transparent, result-oriented
 								marketing strategies that drive brand awareness, generate leads, through cutting-edge
 								technology.
 							</p>
 						</div>
-						<p class="content-top-space1">“We combine strategy, creativity, and technology to build bold
+						<p class="content-top-space1" data-i18n="We_combine_strategy">“We combine strategy, creativity, and technology to build bold
 							digital brands. Our mission is to help clients reach, engage, and convert their audiences at
 							every stage of their digital journey.”
 						</p>
 						<div class="btn-top-space">
-							<p class="btn btn-1"><a href="index.html#">Read More</a></p>
+							<p class="btn btn-1"><a href="index.html#" data-i18n="Read_More">Read More</a></p>
 						</div>
 					</div>
 				</div>
@@ -407,30 +774,29 @@
 	<div class="section-padding section-1-bg" id="gallery">
 		<div class="container heading-ff-2">
 			<div class="heading-div-1 text-center">
-				<h2>FEATURED DIGITAL MARKETING CASE STUDIES</h2>
+				<h2 data-i18n="FEATURED_DIGITAL_MARKETING_CASE_STUDIES">FEATURED DIGITAL MARKETING CASE STUDIES</h2>
 				<div class="underline-ul text-center">
-					<img src="images/broken-line.png" alt="uline" data-at2x="images/110x16@2x.png" />
+					<img src="images/broken-line.png" alt="uline" />
 				</div>
 			</div>
 			<div>
 				<ul class="filter-options clearfix">
-					<li class="active" data-group="all">ALL</li>
-					<li data-group="lorem">MARKETING INSIGHT</li>
-					<li data-group="consectetur">DIGITAL GROWTH</li>
-					<li data-group="magna">pERFORMANCE MARKETING</li>
-					<li data-group="ipsum">STRATEGY HUB</li>
-					<li data-group="aliqua">TRENDS</li>
+					<li class="active" data-group="all" data-i18n="ALL">ALL</li>
+					<li data-group="lorem" data-i18n="MARKETING_INSIGHT">MARKETING INSIGHT</li>
+					<li data-group="consectetur" data-i18n="DIGITAL_GROWTH">DIGITAL GROWTH</li>
+					<li data-group="magna" data-i18n="PERFORMANCE_MARKETING">PERFORMANCE MARKETING</li>
+					<li data-group="ipsum" data-i18n="STRATEGY_HUB">STRATEGY HUB</li>
+					<li data-group="aliqua" data-i18n="TRENDS">TRENDS</li>
 				</ul>
 			</div>
 			<div id="grid" class="row rowsafari popup-gallery text-center gallery-div myShuffle res-no-margin">
 				<div class="col-sm-12 col-md-12 col-lg-4 gallery-pad picture-item"
 					data-groups='["all","lorem","magna","aliqua"]'>
 					<div class="gallery-image picture-item__inner gallery-space">
-						<a href="images/local-seo-statistics-featured-image-620x348.jpg.webp" title="Gallery"
-							data-mfp-src="images/750x580x1@2x.jpg">
+						<a href="images/local-seo-statistics-featured-image-620x348.jpg.webp" title="Gallery">
 							<div class="gallery-inner">
 								<img src="images/local-seo-statistics-featured-image-620x348.jpg.webp" alt="image"
-									class="img-fluid" data-at2x="images/750x580x1@2x.jpg" />
+									class="img-fluid" />
 								<div class="gallery-caption">
 									<i class="fa fa-search-plus" aria-hidden="true"></i>
 								</div>
@@ -441,11 +807,9 @@
 				<div class="col-sm-12 col-md-12 col-lg-4 gallery-pad picture-item"
 					data-groups='["all","consectetur","ipsum"]'>
 					<div class="gallery-image picture-item__inner gallery-space">
-						<a href="images/email-marketing-mistakes.webp" title="Gallery"
-							data-mfp-src="images/750x580x2@2x.jpg">
+						<a href="images/email-marketing-mistakes.webp" title="Gallery">
 							<div class="gallery-inner">
-								<img src="images/email-marketing-mistakes.webp" alt="image" class="img-fluid"
-									data-at2x="images/750x580x2@2x.jpg" />
+								<img src="images/email-marketing-mistakes.webp" alt="image" class="img-fluid" />
 								<div class="gallery-caption">
 									<i class="fa fa-search-plus" aria-hidden="true"></i>
 								</div>
@@ -456,11 +820,10 @@
 				<div class="col-sm-12 col-md-12 col-lg-4 gallery-pad picture-item"
 					data-groups='["all","design","lorem"]'>
 					<div class="gallery-image picture-item__inner gallery-space">
-						<a href="images/data-driven-marketing-strategy-hero-image-620x348.png" title="Gallery"
-							data-mfp-src="images/750x580x3@2x.jpg">
+						<a href="images/data-driven-marketing-strategy-hero-image-620x348.png" title="Gallery">
 							<div class="gallery-inner">
 								<img src="images/data-driven-marketing-strategy-hero-image-620x348.png" alt="image"
-									class="img-fluid" data-at2x="images/750x580x3@2x.jpg" />
+									class="img-fluid" />
 								<div class="gallery-caption">
 									<i class="fa fa-search-plus" aria-hidden="true"></i>
 								</div>
@@ -471,11 +834,10 @@
 				<div class="col-sm-12 col-md-12 col-lg-4 gallery-pad picture-item"
 					data-groups='["all","consectetur", "aliqua"]'>
 					<div class="gallery-image picture-item__inner res-gal-space">
-						<a href="images/digital-marketing-kpis-hero-image-620x348.jpg.webp" title="Gallery"
-							data-mfp-src="images/750x580x4@2x.jpg">
+						<a href="images/digital-marketing-kpis-hero-image-620x348.jpg.webp" title="Gallery">
 							<div class="gallery-inner">
 								<img src="images/digital-marketing-kpis-hero-image-620x348.jpg.webp" alt="image"
-									class="img-fluid" data-at2x="images/750x580x4@2x.jpg" />
+									class="img-fluid" />
 								<div class="gallery-caption">
 									<i class="fa fa-search-plus" aria-hidden="true"></i>
 								</div>
@@ -486,11 +848,10 @@
 				<div class="col-sm-12 col-md-12 col-lg-4 gallery-pad picture-item"
 					data-groups='["all","ipsum","consectetur"]'>
 					<div class="gallery-image picture-item__inner res-gal-space">
-						<a href="images/customer-pain-points-hero-image-1-620x348.jpg.webp" title="Gallery"
-							data-mfp-src="images/750x580x5@2x.jpg">
+						<a href="images/customer-pain-points-hero-image-1-620x348.jpg.webp" title="Gallery">
 							<div class="gallery-inner">
 								<img src="images/customer-pain-points-hero-image-1-620x348.jpg.webp" alt="image"
-									class="img-fluid" data-at2x="images/750x580x5@2x.jpg" />
+									class="img-fluid" />
 								<div class="gallery-caption">
 									<i class="fa fa-search-plus" aria-hidden="true"></i>
 								</div>
@@ -501,11 +862,10 @@
 				<div class="col-sm-12 col-md-12 col-lg-4 gallery-pad picture-item"
 					data-groups='["all","magna", "aliqua","ipsum"]'>
 					<div class="gallery-image picture-item__inner">
-						<a href="images/marketing-budget-optimization-hero-image-620x348.png.webp" title="Gallery"
-							data-mfp-src="images/750x580x6@2x.jpg">
+						<a href="images/marketing-budget-optimization-hero-image-620x348.png.webp" title="Gallery">
 							<div class="gallery-inner">
 								<img src="images/marketing-budget-optimization-hero-image-620x348.png.webp" alt="image"
-									class="img-fluid" data-at2x="images/750x580x6@2x.jpg" />
+									class="img-fluid" />
 								<div class="gallery-caption">
 									<i class="fa fa-search-plus" aria-hidden="true"></i>
 								</div>
@@ -524,23 +884,22 @@
 			<div class="container">
 				<div class="row rowsafari text-center res-no-margin">
 					<div class="col-6 col-sm-3 col-md-3 col-lg-3 res-counter-col">
-						<img src="images/public.png" alt="icon" class="image-bottom"
-							data-at2x="images/64x64x1@2x.png" />
+						<img src="images/public.png" alt="icon" class="image-bottom" />
 						<p class="count counter-value">540</p>
 						<h4>CLIENTS</h4>
 					</div>
 					<div class="col-6 col-sm-3 col-md-3 col-lg-3">
-						<img src="images/pc.png" alt="icon" class="image-bottom" data-at2x="images/64x64x2@2x.png" />
+						<img src="images/pc.png" alt="icon" class="image-bottom" />
 						<p class="count counter-value">1200</p>
 						<h4>PROJECTS</h4>
 					</div>
 					<div class="col-6 col-sm-3 col-md-3 col-lg-3 res-top30-1">
-						<img src="images/likes.png" alt="icon" class="image-bottom" data-at2x="images/64x64x3@2x.png" />
+						<img src="images/likes.png" alt="icon" class="image-bottom" />
 						<p class="count counter-value">2500</p>
 						<h4>LIKES</h4>
 					</div>
 					<div class="col-6 col-sm-3 col-md-3 col-lg-3 res-top30-1">
-						<img src="images/badge.png" alt="icon" class="image-bottom" data-at2x="images/64x64x4@2x.png" />
+						<img src="images/badge.png" alt="icon" class="image-bottom" />
 						<p class="count counter-value">940</p>
 						<h4>AWARDS</h4>
 					</div>
@@ -556,15 +915,14 @@
 			<div class="row rowsafari">
 				<div class="col-sm-12 col-md-12 col-lg-6">
 					<div class="pad-right25">
-						<img src="images/750x450x1.jpg" alt="image" class="img-fluid"
-							data-at2x="images/750x450x1@2x.jpg" />
+						<img src="images/750x450x1.jpg" alt="image" class="img-fluid" />
 					</div>
 				</div>
 				<div class="col-sm-12 col-md-12 col-lg-6 abt-top">
 					<div class="pad-left25">
 						<h3>BUSINESS ORGANIZATION</h3>
 						<div class="uline-img">
-							<img src="images/horizontal.png" alt="uline" data-at2x="images/50x6@2x.png" />
+							<img src="images/horizontal.png" alt="uline" />
 						</div>
 						<p class="content-top-space1">We help businesses build a strong digital foundation by aligning
 							their organizational goals with targeted marketing strategies. From internal workflow
@@ -589,7 +947,7 @@
 			<div class="heading-div-1 text-center">
 				<h2>OUR PRICING</h2>
 				<div class="underline-ul text-center">
-					<img src="images/broken-line.png" alt="uline" data-at2x="images/110x16@2x.png" />
+					<img src="images/broken-line.png" alt="uline"  />
 				</div>
 			</div>
 			<div class="row res-no-margin rowsafari">
@@ -670,7 +1028,7 @@
 			<div class="heading-div-1 text-center">
 				<h2>OUR SKILLSET</h2>
 				<div class="underline-ul text-center">
-					<img src="images/broken-line.png" alt="uline" data-at2x="images/110x16@2x.png" />
+					<img src="images/broken-line.png" alt="uline" />
 				</div>
 			</div>
 			<div class="row rowsafari">
@@ -732,8 +1090,7 @@
 				</div>
 				<div class="col-sm-12 col-md-12 col-lg-6 order-lg-2 order-1">
 					<div class="pad-left25">
-						<img src="images/760x520x1.jpg" alt="image" class="img-fluid"
-							data-at2x="images/760x520x1@2x.jpg" />
+						<img src="images/760x520x1.jpg" alt="image" class="img-fluid" />
 					</div>
 				</div>
 			</div>
@@ -769,15 +1126,14 @@
 			<div class="heading-div-1 text-center">
 				<h2>MEET OUR TEAM</h2>
 				<div class="underline-ul text-center">
-					<img src="images/broken-line.png" alt="uline" data-at2x="images/110x16@2x.png" />
+					<img src="images/broken-line.png" alt="uline" />
 				</div>
 			</div>
 			<div class="row rowsafari text-center">
 				<div class="col-sm-7 col-md-7 col-lg-4 margin-auto">
 					<div class="team-col res-col-center">
 						<div class="team-col-img">
-							<img src="images/480x600x1.jpg" alt="image" class="img-fluid"
-								data-at2x="images/480x600x1@2x.jpg" />
+							<img src="images/480x600x1.jpg" alt="image" class="img-fluid"/>
 							<div class="team-col-content">
 								<h4>LOUIS CAROL</h4>
 								<p class="team-name">Manager</p>
@@ -787,25 +1143,25 @@
 							<ul class="no-pad no-margin team-icon">
 								<li>
 									<a href="index.html#">
-										<img src="images/32x32x4.png" alt="icon" data-at2x="images/32x32x4@2x.png" />
+										<img src="images/32x32x4.png" alt="icon" />
 									</a>
 								</li>
 
 								<li>
 									<a href="index.html#">
-										<img src="images/32x32x5.png" alt="icon" data-at2x="images/32x32x5@2x.png" />
+										<img src="images/32x32x5.png" alt="icon" />
 									</a>
 								</li>
 
 								<li>
 									<a href="index.html#">
-										<img src="images/32x32x6.png" alt="icon" data-at2x="images/32x32x6@2x.png" />
+										<img src="images/32x32x6.png" alt="icon"  />
 									</a>
 								</li>
 
 								<li>
 									<a href="index.html#">
-										<img src="images/32x32x7.png" alt="icon" data-at2x="images/32x32x7@2x.png" />
+										<img src="images/32x32x7.png" alt="icon" />
 									</a>
 								</li>
 							</ul>
@@ -815,8 +1171,7 @@
 				<div class="col-sm-7 col-md-7 col-lg-4 margin-auto res-pad30">
 					<div class="team-col res-col-center">
 						<div class="team-col-img">
-							<img src="images/480x600x2.jpg" alt="image" class="img-fluid"
-								data-at2x="images/480x600x2@2x.jpg" />
+							<img src="images/480x600x2.jpg" alt="image" class="img-fluid"/>
 							<div class="team-col-content">
 								<h4>MARK PETER</h4>
 								<p class="team-name">Manager</p>
@@ -826,25 +1181,25 @@
 							<ul class="no-pad no-margin team-icon">
 								<li>
 									<a href="index.html#">
-										<img src="images/32x32x4.png" alt="icon" data-at2x="images/32x32x4@2x.png" />
+										<img src="images/32x32x4.png" alt="icon"  />
 									</a>
 								</li>
 
 								<li>
 									<a href="index.html#">
-										<img src="images/32x32x5.png" alt="icon" data-at2x="images/32x32x5@2x.png" />
+										<img src="images/32x32x5.png" alt="icon" />
 									</a>
 								</li>
 
 								<li>
 									<a href="index.html#">
-										<img src="images/32x32x6.png" alt="icon" data-at2x="images/32x32x6@2x.png" />
+										<img src="images/32x32x6.png" alt="icon" />
 									</a>
 								</li>
 
 								<li>
 									<a href="index.html#">
-										<img src="images/32x32x7.png" alt="icon" data-at2x="images/32x32x7@2x.png" />
+										<img src="images/32x32x7.png" alt="icon" />
 									</a>
 								</li>
 							</ul>
@@ -855,7 +1210,7 @@
 					<div class="team-col res-col-center">
 						<div class="team-col-img">
 							<img src="images/480x600x3.jpg" alt="image" class="img-fluid res-img-center"
-								data-at2x="images/480x600x3@2x.jpg" />
+								 />
 							<div class="team-col-content">
 								<h4>HENRY JOY</h4>
 								<p class="team-name">Manager</p>
@@ -865,25 +1220,25 @@
 							<ul class="no-pad no-margin team-icon">
 								<li>
 									<a href="index.html#">
-										<img src="images/32x32x4.png" alt="icon" data-at2x="images/32x32x4@2x.png" />
+										<img src="images/32x32x4.png" alt="icon"  />
 									</a>
 								</li>
 
 								<li>
 									<a href="index.html#">
-										<img src="images/32x32x5.png" alt="icon" data-at2x="images/32x32x5@2x.png" />
+										<img src="images/32x32x5.png" alt="icon" />
 									</a>
 								</li>
 
 								<li>
 									<a href="index.html#">
-										<img src="images/32x32x6.png" alt="icon" data-at2x="images/32x32x6@2x.png" />
+										<img src="images/32x32x6.png" alt="icon" />
 									</a>
 								</li>
 
 								<li>
 									<a href="index.html#">
-										<img src="images/32x32x7.png" alt="icon" data-at2x="images/32x32x7@2x.png" />
+										<img src="images/32x32x7.png" alt="icon"  />
 									</a>
 								</li>
 							</ul>
@@ -901,15 +1256,14 @@
 			<div class="row rowsafari">
 				<div class="col-sm-12 col-md-12 col-lg-6 order-lg-2">
 					<div class="pad-left25">
-						<img src="images/business.webp" alt="image" class="img-fluid"
-							data-at2x="images/750x450x2@2x.jpg" />
+						<img src="images/business.webp" alt="image" class="img-fluid" />
 					</div>
 				</div>
 				<div class="col-sm-12 col-md-12 col-lg-6 abt-top order-lg-1">
 					<div class="pad-right25">
 						<h3> Digital Marketing Strategies</h3>
 						<div class="uline-img">
-							<img src="images/horizontal.png" alt="uline" data-at2x="images/50x6@2x.png" />
+							<img src="images/horizontal.png" alt="uline" />
 						</div>
 						<p class="content-top-space1">Developing a Startup digital marketing strategy is crucial for
 							businesses to identify their goals, define their target audience, and create an effective
@@ -937,15 +1291,14 @@
 			<div class="heading-div-1 text-center">
 				<h2>OUR LATEST</h2>
 				<div class="underline-ul text-center">
-					<img src="images/broken-line.png" alt="uline" data-at2x="images/110x16@2x.png" />
+					<img src="images/broken-line.png" alt="uline" />
 				</div>
 			</div>
 			<div class="row rowsafari">
 				<div class="col-sm-12 col-md-12 col-lg-4">
 					<div class="news-col">
 						<div class="news-col-img">
-							<img src="images/word-of-mouth.webp" alt="image" class="img-fluid"
-								data-at2x="images/760x520x2@2x.jpg" />
+							<img src="images/word-of-mouth.webp" alt="image" class="img-fluid" />
 						</div>
 						<div class="news-content">
 							<p class="news-date"><a href="index.html#">Digital Marketing</a></p>
@@ -965,8 +1318,7 @@
 				<div class="col-sm-12 col-md-12 col-lg-4 res-top30">
 					<div class="news-col">
 						<div class="news-col-img">
-							<img src="images/email-marketing-mistakes.webp" alt="image" class="img-fluid"
-								data-at2x="images/760x520x3@2x.jpg" />
+							<img src="images/email-marketing-mistakes.webp" alt="image" class="img-fluid" />
 						</div>
 						<div class="news-content">
 							<p class="news-date"><a href="index.html#">Digital Marketing</a></p>
@@ -985,8 +1337,7 @@
 				<div class="col-sm-12 col-md-12 col-lg-4 res-top30">
 					<div class="news-col">
 						<div class="news-col-img">
-							<img src="images/technical-seo.png" alt="image" class="img-fluid"
-								data-at2x="images/760x520x4@2x.jpg" />
+							<img src="images/technical-seo.png" alt="image" class="img-fluid" />
 						</div>
 						<div class="news-content">
 							<p class="news-date"><a href="index.html#">Digital Marketing</a></p>
@@ -1014,7 +1365,7 @@
 			<div class="heading-div-1 text-center">
 				<h2>FREQUENTLY ASKED QUESTIONS</h2>
 				<div class="underline-ul text-center">
-					<img src="images/broken-line.png" alt="uline" data-at2x="images/110x16@2x.png" />
+					<img src="images/broken-line.png" alt="uline" />
 				</div>
 			</div>
 			<div class="row faq-accord rowsafari">
@@ -1150,8 +1501,7 @@
 								<div class="col-sm-12 col-md-12 col-lg-12 no-pad">
 									<div class="testimonial-div text-center">
 										<div class="client-img">
-											<img src="images/amitmehra.jpeg" alt="150x150x1"
-												data-at2x="images/150x150x1@2x.png" />
+											<img src="images/amitmehra.jpeg" alt="150x150x1" />
 										</div>
 										<p>Thanks to this team, our website traffic has doubled in just three months.
 											Their marketing strategy really works!
@@ -1166,8 +1516,7 @@
 								<div class="col-sm-12 col-md-12 col-lg-12 no-pad">
 									<div class="testimonial-div text-center">
 										<div class="client-img">
-											<img src="images/150x150x2.png" alt="150x150x1"
-												data-at2x="images/150x150x2@2x.png" />
+											<img src="images/150x150x2.png" alt="150x150x1" />
 										</div>
 										<p>They completely transformed our online presence. We now rank on the first
 											page of Google!
@@ -1182,8 +1531,7 @@
 								<div class="col-sm-12 col-md-12 col-lg-12 no-pad">
 									<div class="testimonial-div text-center">
 										<div class="client-img">
-											<img src="images/ravimalhotra.jpeg" alt="150x150x1"
-												data-at2x="images/150x150x3@2x.png" />
+											<img src="images/ravimalhotra.jpeg" alt="150x150x1" />
 										</div>
 										<p>Professional, responsive, and results-oriented. Their Facebook and Instagram
 											campaigns brought in quality leads.
@@ -1198,8 +1546,7 @@
 								<div class="col-sm-12 col-md-12 col-lg-12 no-pad">
 									<div class="testimonial-div text-center">
 										<div class="client-img">
-											<img src="images/150x150x3.png" alt="150x150x1"
-												data-at2x="images/150x150x3@2x.png" />
+											<img src="images/150x150x3.png" alt="150x150x1" />
 										</div>
 										<p>Our brand visibility skyrocketed! Their content marketing and branding
 											strategy gave us a unique identity online.
@@ -1214,8 +1561,7 @@
 								<div class="col-sm-12 col-md-12 col-lg-12 no-pad">
 									<div class="testimonial-div text-center">
 										<div class="client-img">
-											<img src="images/KaranS.jpeg" alt="150x150x1"
-												data-at2x="images/150x150x3@2x.png" />
+											<img src="images/KaranS.jpeg" alt="150x150x1" />
 										</div>
 										<p>We were struggling to reach our target audience, but their PPC and Google Ads
 											strategy was a game-changer.
@@ -1230,8 +1576,7 @@
 								<div class="col-sm-12 col-md-12 col-lg-12 no-pad">
 									<div class="testimonial-div text-center">
 										<div class="client-img">
-											<img src="images/150x150x3.png" alt="150x150x1"
-												data-at2x="images/150x150x3@2x.png" />
+											<img src="images/150x150x3.png" alt="150x150x1" />
 										</div>
 										<p>I highly recommend them! Our ROI from digital ads improved by over 60%.
 										</p>
@@ -1245,8 +1590,7 @@
 								<div class="col-sm-12 col-md-12 col-lg-12 no-pad">
 									<div class="testimonial-div text-center">
 										<div class="client-img">
-											<img src="images/vishalpatel.jpg" alt="150x150x1"
-												data-at2x="images/150x150x3@2x.png" />
+											<img src="images/vishalpatel.jpg" alt="150x150x1" />
 										</div>
 										<p>From logo design to digital strategy — everything was handled professionally
 											and creatively.
@@ -1261,8 +1605,7 @@
 								<div class="col-sm-12 col-md-12 col-lg-12 no-pad">
 									<div class="testimonial-div text-center">
 										<div class="client-img">
-											<img src="images/150x150x3.png" alt="150x150x1"
-												data-at2x="images/150x150x3@2x.png" />
+											<img src="images/150x150x3.png" alt="150x150x1" />
 										</div>
 										<p>We saw a 4x increase in engagement after they handled our social media. Truly
 											impressive work!
@@ -1277,8 +1620,7 @@
 								<div class="col-sm-12 col-md-12 col-lg-12 no-pad">
 									<div class="testimonial-div text-center">
 										<div class="client-img">
-											<img src="images/150x150x3.png" alt="150x150x1"
-												data-at2x="images/150x150x3@2x.png" />
+											<img src="images/150x150x3.png" alt="150x150x1" />
 										</div>
 										<p>They understand analytics like no one else. Their monthly reports and
 											strategy updates keep us informed and confident.
@@ -1293,8 +1635,7 @@
 								<div class="col-sm-12 col-md-12 col-lg-12 no-pad">
 									<div class="testimonial-div text-center">
 										<div class="client-img">
-											<img src="images/150x150x3.png" alt="150x150x1"
-												data-at2x="images/150x150x3@2x.png" />
+											<img src="images/150x150x3.png" alt="150x150x1" />
 										</div>
 										<p>The team listens, understands, and delivers beyond expectations. Best digital
 											partner we’ve worked with!
@@ -1317,14 +1658,13 @@
 			<div class="row rowsafari">
 				<div class="col-sm-12 col-md-12 col-lg-6 text-center res-center">
 					<div class="map-img">
-						<img src="images/760x745.jpg" alt="image" class="img-fluid" data-at2x="images/760x745@2x.jpg" />
+						<img src="images/760x745.jpg" alt="image" class="img-fluid" />
 					</div>
 				</div>
 				<div class="col-sm-7 col-md-7 col-lg-6 margin-auto res-pad30 contact-form-top">
 					<div class="contact-now-form">
 						<div class="contact-icon">
-							<img src="images/round-email.png" alt="image" data-at2x="images/64x64x5@2x.jpg"
-								class="rounded-circle" />
+							<img src="images/round-email.png" alt="image" class="rounded-circle" />
 						</div>
 						<div class="contact-form-head text-center">
 							<h3>SEND A MESSAGE</h3>
@@ -1384,25 +1724,25 @@
 							<ul class="no-padding no-margin footer-icon footer-left-pad">
 								<li>
 									<a href="index.html#">
-										<img src="images/32x32x4.png" alt="icon" data-at2x="images/32x32x4@2x.png" />
+										<img src="images/32x32x4.png" alt="icon" />
 									</a>
 								</li>
 
 								<li>
 									<a href="index.html#">
-										<img src="images/32x32x5.png" alt="icon" data-at2x="images/32x32x5@2x.png" />
+										<img src="images/32x32x5.png" alt="icon" />
 									</a>
 								</li>
 
 								<li>
 									<a href="index.html#">
-										<img src="images/32x32x6.png" alt="icon" data-at2x="images/32x32x6@2x.png" />
+										<img src="images/32x32x6.png" alt="icon" />
 									</a>
 								</li>
 
 								<li>
 									<a href="index.html#">
-										<img src="images/32x32x7.png" alt="icon" data-at2x="images/32x32x7@2x.png" />
+										<img src="images/32x32x7.png" alt="icon" />
 									</a>
 								</li>
 							</ul>
@@ -1416,8 +1756,7 @@
 					<div class="res-footer-posts-col">
 						<div class="distab posts-bottom">
 							<div class="distab-cell-top">
-								<a href="index.html#"><img src="images/80x80x7.png" alt="icon"
-										data-at2x="images/80x80x7@2x.png" />
+								<a href="index.html#"><img src="images/80x80x7.png" alt="icon" />
 								</a>
 							</div>
 							<div class="text-left left-pad">
@@ -1428,8 +1767,7 @@
 
 						<div class="distab">
 							<div class="text-left distab-cell-top">
-								<a href="index.html#"><img src="images/80x80x8.png" alt="icon"
-										data-at2x="images/80x80x8@2x.png" />
+								<a href="index.html#"><img src="images/80x80x8.png" alt="icon" />
 								</a>
 							</div>
 							<div class="text-left distab-cell-middle left-pad">
@@ -1446,7 +1784,7 @@
 					<div class="res-footer-contact-col">
 						<div class="distab footer-contact-bottom-1">
 							<div class="distab-cell-middle">
-								<img src="images/location.png" alt="icon" data-at2x="images/25x25x1@2x.png" />
+								<img src="images/location.png" alt="icon" />
 							</div>
 							<div class="distab-cell-middle footer-contact-left">
 								<p class="text-left">485, Park Town, Newyork, USA</p>
@@ -1455,7 +1793,7 @@
 
 						<div class="distab footer-contact-bottom-1">
 							<div class="distab-cell-middle">
-								<img src="images/email.png" alt="icon" data-at2x="images/25x25x2@2x.png" />
+								<img src="images/email.png" alt="icon" />
 							</div>
 							<div class="distab-cell-middle footer-contact-left">
 								<p class="text-left"><a href="index.html#">synorix.net@gmail.com</a>
@@ -1465,7 +1803,7 @@
 
 						<div class="distab footer-contact-bottom-1">
 							<div class="distab-cell-middle">
-								<img src="images/link.png" alt="icon" data-at2x="images/25x25x3@2x.png" />
+								<img src="images/link.png" alt="icon" />
 							</div>
 							<div class="distab-cell-middle footer-contact-left">
 								<p class="text-left"><a href="index.html#">example@wesbite.com</a>
@@ -1475,7 +1813,7 @@
 
 						<div class="distab">
 							<div class="distab-cell-middle">
-								<img src="images/contact.png" alt="icon" data-at2x="images/25x25x4@2x.png" />
+								<img src="images/contact.png" alt="icon" />
 							</div>
 							<div class="distab-cell-middle footer-contact-left">
 								<p class="text-left">+918291216055 </p>
