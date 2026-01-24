@@ -5342,16 +5342,22 @@ const translations = {
 
 // When the page content is ready...
 document.addEventListener("DOMContentLoaded", () => {
-    setLocale(locale); // Set the initial locale
-    bindLocaleSwitcher(locale); // Bind the locale switcher
+    // Check URL for lang parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLang = urlParams.get('lang');
+    const savedLocale = localStorage.getItem('locale');
+    const initialLocale = urlLang || savedLocale || locale; // urlLang first, then saved, then default
+    setLocale(initialLocale);
+    bindLocaleSwitcher(initialLocale); // Bind the locale switcher dropdown
 });
 
 // Set the locale and update translations
 function setLocale(newLocale) {
     if (translations[newLocale]) {
-        locale = newLocale; // Update the locale dynamically
-        updateContent();    // Update the text on the page
-        // Adjust the text direction (LTR/RTL)
+        locale = newLocale;
+        localStorage.setItem('locale', newLocale); // Save last selected locale
+        updateContent();
+        // Optional: update direction if needed
     }
 }
 
@@ -5490,6 +5496,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
             selectedFlag.src = selectedFlagUrl;
             selectedLanguage.textContent = selectedText;
+
+            // ✅ Set the locale from URL
+            setLocale(selectedLang);
         }
     }
 });
