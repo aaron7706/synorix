@@ -26,7 +26,7 @@ const translations = {
                 "ONLINE_MARKETING": "ONLINE MARKETING",
                 "Drive_traffic_increase_engagement": "Drive traffic, increase engagement, and grow your brand presence with result-oriented digital marketing strategies including SEO, PPC, and social media.",
                 "MERCHANT_PROCESSING": "MERCHANT PROCESSING",
-                "Simplify_your_payment_process": "Simplify your payment process with secure, fast, and flexible merchant solutions. Accept payments online or offline with ease and full transparency.",
+                "Simplify_your_payment_process": "Simplify your payment process with secure, fast, and flexible merchant solutions. Accept payments online or offline with ease, speed, and complete transparency for your business.",
                 "BUSINESS_STRATEGY": "BUSINESS STRATEGY",
                 "Turn_insights_into_action": "Turn insights into action with smart business strategies tailored to your industry. We help you plan, pivot, and scale with confidence.",
                 "CUSTOM_SERVICES": "CUSTOM SERVICES",
