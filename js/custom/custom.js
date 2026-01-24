@@ -1,65 +1,57 @@
 /*========================================== MASTER JAVASCRIPT ===================================================================
 
-	Project     :	AGENCY TEMPLATE
-	Version     :	1.0
-	Last Change : 	10/1/2018
-	Primary Use :   AGENCY TEMPLATE
+    Project     :	AGENCY TEMPLATE
+    Version     :	1.0
+    Last Change : 	10/1/2018
+    Primary Use :   AGENCY TEMPLATE
 
 =================================================================================================================================*/
 
-$(document).on('ready', function() {
+$(document).on('ready', function () {
     "use strict"; //Start of Use Strict
-    var menu_li = $('.navbar-nav li a');  
-    var collapse = $('.navbar-collapse');  
+    var menu_li = $('.navbar-nav li a');
+    var collapse = $('.navbar-collapse');
     var top_nav = $('#top-nav');
+    var menu_list = $('.navbar-nav'); // ✅ ADD THIS
 
-	//MENU SCROLL
+    // MENU SCROLL (NO LAG)
     if (top_nav.length) {
-        var x = top_nav.offset().top;
-        if (x > 50) {
-            top_nav.fadeIn();
-        } else {
-            top_nav.fadeOut();
-        }
-        $(document).on('scroll', function() {
+        $(window).on('scroll', function () {
             var y = $(this).scrollTop();
-            if (y > 50) {
-                top_nav.fadeIn();
-            } else {
-                top_nav.fadeOut();
-            }
+            top_nav.toggleClass('visible', y > 50);
         });
     }
-	
-    //RESPONSIVE MENU SHOW AND HIDE FUNCTION
-    if (menu_li.length) {
-        menu_li.on("click", function(event) {
-			var disp = $(".navbar-toggler").css('display'); 
-			if( !$(".navbar-toggler").hasClass('collapsed') ){			
-				if(collapse.hasClass('show')){
-					collapse.removeClass('show').slideUp( "slow");
-				}
-			}            
-        });    
-    }	
-	
 
-    //MENU BAR SMOOTH SCROLLING FUNCTION
-    var menu_list = $('.navbar-nav');
-    if (menu_list.length) {
-        menu_list.on("click", ".pagescroll", function(event) {
-            event.stopPropagation();
-            event.preventDefault();
-            var hash_tag = $(this).attr('href');
-            if ($(hash_tag).length) {
-                $('html, body').animate({
-                    scrollTop: $(hash_tag).offset().top - 80
-                }, 2000);
+    // RESPONSIVE MENU SHOW AND HIDE (BOOTSTRAP SAFE)
+    if (menu_li.length) {
+        menu_li.on('click', function () {
+            if (!$('.navbar-toggler').hasClass('collapsed')) {
+                $('.navbar-toggler').trigger('click'); // ✅ let Bootstrap handle it
             }
-            return false;
         });
     }
-	
+
+    // Smooth scroll for any element with .pagescroll
+    $(document).on('click', 'a.pagescroll', function (e) {
+        e.preventDefault();
+        var target = $(this).attr('href');
+        if ($(target).length) {
+            var scrollOffset = 80; // fixed header offset
+            var distance = Math.abs($(target).offset().top - $(window).scrollTop());
+
+            // Make scroll slightly faster on mobile
+            var isMobile = $(window).width() < 768;
+            var scrollDuration = Math.min(Math.max(distance / (isMobile ? 1.5 : 2), 500), 1000);
+            // Mobile: divide by 1.5 → faster scroll, min 500ms, max 1000ms
+
+            $('html, body').stop(true).animate(
+                { scrollTop: $(target).offset().top - scrollOffset },
+                scrollDuration,
+                'swing'
+            );
+        }
+    });
+
     //GALLERY POPUP
     var gallery = $('.popup-gallery');
     if (gallery.length) {
@@ -75,28 +67,28 @@ $(document).on('ready', function() {
             },
             image: {
                 tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-                titleSrc: function(item) {
+                titleSrc: function (item) {
                     return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
                 }
             }
         });
     }
-	
+
     // YOUTUBE BACKGROUND VIDEO FUNCTION	  
     var player = $('.player');
     if (player.length) {
         player.mb_YTPlayer();
     }
-	
-	//FAQ ACCORDION
-	var accordion = $(".faq-accord");
+
+    //FAQ ACCORDION
+    var accordion = $(".faq-accord");
     if (accordion.length) {
-        accordion.each(function() {
+        accordion.each(function () {
             var all_panels = $(this).find('.faq-ans').hide();
             var all_titles = $(this).find('.faq-ques');
             $(this).find('.faq-ans.active').slideDown();
 
-            all_titles.on("click", function() {
+            all_titles.on("click", function () {
                 var acc_title = $(this);
                 var acc_inner = acc_title.next();
 
@@ -110,19 +102,19 @@ $(document).on('ready', function() {
                     all_titles.removeClass('active');
                 }
             });
-        }); 
+        });
         $(".faq-accord .faq-row > div:first-child .faq-ans").slideDown();
     }
-	
-	
+
+
     // Skillset1 JS
-	$('.skill-div').each(function(){
-		jQuery(this).find('.skillbar-bar').animate({
-			width:jQuery(this).attr('data-percent')
-		},6000);
-	});
-	
-	//COUNTER
+    $('.skill-div').each(function () {
+        jQuery(this).find('.skillbar-bar').animate({
+            width: jQuery(this).attr('data-percent')
+        }, 6000);
+    });
+
+    //COUNTER
     var counter = $('.count');
     if (counter.length) {
         counter.counterUp({
@@ -130,20 +122,20 @@ $(document).on('ready', function() {
             time: 1000
         });
     }
-	
+
     //CONTACT FORM VALIDATION	
     if ($('.contact-form').length) {
-        $('.contact-form').each(function() {
+        $('.contact-form').each(function () {
             $(this).validate({
                 errorClass: 'error',
-                submitHandler: function(form) {
+                submitHandler: function (form) {
                     $.ajax({
                         type: "POST",
                         url: "mail/mail.php",
                         data: $(form).serialize(),
-                        success: function(data) {
+                        success: function (data) {
                             if (data) {
-								$(form)[0].reset();
+                                $(form)[0].reset();
                                 $('.sucessMessage').html('Mail Sent Successfully!!!');
                                 $('.sucessMessage').show();
                                 $('.sucessMessage').delay(3000).fadeOut();
@@ -153,7 +145,7 @@ $(document).on('ready', function() {
                                 $('.failMessage').delay(3000).fadeOut();
                             }
                         },
-                        error: function(XMLHttpRequest, textStatus, errorThrown) {
+                        error: function (XMLHttpRequest, textStatus, errorThrown) {
                             $('.failMessage').html(textStatus);
                             $('.failMessage').show();
                             $('.failMessage').delay(3000).fadeOut();
@@ -163,7 +155,4 @@ $(document).on('ready', function() {
             });
         });
     }
-	
-    return false;
-    // End of use strict
 });

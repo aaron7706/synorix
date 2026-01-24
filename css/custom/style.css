@@ -2314,6 +2314,6 @@ only screen and (min-resolution: 1.5dppx) {
 
 
 /* language css end  */
-html {
+/* html {
   scroll-behavior: smooth !important;
-}
+} */

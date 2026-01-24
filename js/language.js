@@ -4910,21 +4910,17 @@ function updateContent() {
 // Bind the locale switcher dropdown to dynamically update locale
 function bindLocaleSwitcher(initialValue) {
     const switcher = document.querySelector("[data-i18n-switcher]");
-    switcher.value = initialValue;
+    if (!switcher) return; // ✅ Exit if switcher not found
 
+    // Set initial value safely
+    if (initialValue) switcher.value = initialValue;
+
+    // Handle changes
     switcher.onchange = (e) => {
-        setLocale(e.target.value); // Set the locale based on selected option
+        const newLocale = e.target.value;
+        if (newLocale) setLocale(newLocale);
     };
 }
-
-
-
-
-
-
-
-
-
 
 // document.addEventListener('DOMContentLoaded', function() {
 //     const dropdownSelected = document.getElementById('dropdownSelected');

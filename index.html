@@ -6,24 +6,26 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Synorix</title>
-	<!-- FAVICON LINK -->
+
+	<!-- FAVICON -->
 	<link rel="shortcut icon" href="images/synorix favicon.png" type="image/x-icon">
-	<!-- STYLESHEETS -->
+
 	<!-- BOOTSTRAP CSS -->
-	<link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css">
-	<!-- FONT AWESOME -->
+	<link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+
+	<!-- FONT AWESOME (CDN for local dev, avoids CORS/404) -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="css/vendor/font-awesome/css/font-awesome.min.css" />
-	<link rel="stylesheet" type="text/css" href="css/vendor/font-awesome/css/font-awesome.css" />
+
 	<!-- MAGNIFIC LIGHT BOX -->
-	<link rel="stylesheet" type="text/css" href="css/vendor/magnific/magnific-popup.css">
-	<!-- CAROUSEL STYLE LINK -->
-	<link rel="stylesheet" type="text/css" href="css/vendor/owl-carousel/owl.carousel.css">
-	<link rel="stylesheet" type="text/css" href="css/vendor/owl-carousel/owl.theme.css">
-	<link rel="stylesheet" type="text/css" href="css/vendor/owl-carousel/carousel.css">
+	<link rel="stylesheet" href="css/vendor/magnific/magnific-popup.css">
+
+	<!-- CAROUSEL STYLE -->
+	<link rel="stylesheet" href="css/vendor/owl-carousel/owl.carousel.css">
+	<link rel="stylesheet" href="css/vendor/owl-carousel/owl.theme.css">
+	<link rel="stylesheet" href="css/vendor/owl-carousel/carousel.css">
+
 	<!-- CUSTOM CSS -->
-	<link rel="stylesheet" type="text/css" href="css/custom/style.css">
-	<script src="js/language.js"></script>
+	<link rel="stylesheet" href="css/custom/style.css">
 </head>
 
 <body data-spy="scroll" data-target="#navbarSupportedContent" data-offset="100">
@@ -483,9 +485,12 @@
 									innovation to help companies...
 									<!-- From SEO and social media marketing to performance-driven campaigns and conversion optimization, we provide tailored solutions that drive real results. Our data-driven approach ensures every marketing dollar delivers maximum ROI. -->
 								</p>
-								<div class="pagescroll nav-link">
-									<p class="btn btn-1"><a href="#contact" class="pagescroll nav-link"
-											data-i18n="Boost_Your_Result_With_Us">Boost Your Result With Us</a></p>
+								<div class="nav-link">
+									<p class="btn btn-1">
+										<a href="#contact" class="pagescroll" data-i18n="Boost_Your_Result_With_Us">
+											Boost Your Result With Us
+										</a>
+									</p>
 								</div>
 							</div>
 						</div>
@@ -2010,37 +2015,50 @@
 	</section>
 	<!--================================= FOOTER END =============================================-->
 
-
 	<!-- JQUERY LIBRARY -->
-	<script type="text/javascript" src="js/vendor/jquery.min.js"></script>
-	<!-- BOOTSTRAP -->
-	<script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
-	<!-- SLIDER JS FILES -->
-	<script type="text/javascript" src="js/vendor/slider/owl.carousel.min.js"></script>
-	<script type="text/javascript" src="js/vendor/slider/owl-slider.js"></script>
-	<!-- MAGNIFIC LIGHT BOX -->
-	<script type="text/javascript" src="js/vendor/magnific/jquery.magnific-popup.js"></script>
-	<!-- SHUFFLE JS FILES -->
-	<script type="text/javascript" src="js/vendor/shuffle/modernizr.custom.min.js"></script>
-	<script type="text/javascript" src="js/vendor/shuffle/jquery.shuffle.js"></script>
-	<script type="text/javascript" src="js/vendor/shuffle/page.js"></script>
-	<script type="text/javascript" src="js/vendor/shuffle/evenheights.js"></script>
-	<script type="text/javascript" src="js/vendor/shuffle/homepage.js"></script>
-	<!-- SUBSCRIBE MAILCHIMP -->
-	<script type="text/javascript" src="js/vendor/subscribe/subscribe_validate.js"></script>
+	<script src="js/vendor/jquery.min.js"></script>
+
+	<!-- BOOTSTRAP JS -->
+	<script src="js/vendor/bootstrap.min.js"></script>
+
 	<!-- FORM VALIDATION -->
-	<script type="text/javascript" src="js/vendor/validate/jquery.validate.min.js"></script>
+	<script src="js/vendor/validate/jquery.validate.min.js"></script>
+
+	<!-- SLIDER JS FILES -->
+	<script src="js/vendor/slider/owl.carousel.min.js"></script>
+	<script src="js/vendor/slider/owl-slider.js"></script>
+
+	<!-- MAGNIFIC LIGHT BOX -->
+	<script src="js/vendor/magnific/jquery.magnific-popup.js"></script>
+
+	<!-- SHUFFLE JS FILES -->
+	<script src="js/vendor/shuffle/modernizr.custom.min.js"></script>
+	<script src="js/vendor/shuffle/jquery.shuffle.js"></script>
+	<script src="js/vendor/shuffle/page.js"></script>
+	<script src="js/vendor/shuffle/evenheights.js"></script>
+	<script src="js/vendor/shuffle/homepage.js"></script>
+
+	<!-- SUBSCRIBE MAILCHIMP -->
+	<script src="js/vendor/subscribe/subscribe_validate.js"></script>
+
 	<!-- NUMBER VALIDATION JS FILES -->
-	<script type="text/javascript" src="js/vendor/number.js"></script>
+	<script src="js/vendor/number.js"></script>
+
 	<!-- VIDEO -->
-	<script type="text/javascript" src="js/vendor/video/video.js"></script>
+	<script src="js/vendor/video/video.js"></script>
+
 	<!-- COUNTER JS FILES -->
-	<script type="text/javascript" src="js/vendor/counter/counter-lib.js"></script>
-	<script type="text/javascript" src="js/vendor/counter/jquery.counterup.min.js"></script>
+	<script src="js/vendor/counter/counter-lib.js"></script>
+	<script src="js/vendor/counter/jquery.counterup.min.js"></script>
+
 	<!-- RETINA JS FILES -->
-	<script type="text/javascript" src="js/vendor/retina.js"></script>
-	<!-- THEME JS -->
-	<script type="text/javascript" src="js/custom/custom.js"></script>
+	<script src="js/vendor/retina.js"></script>
+
+	<!-- LANGUAGE SWITCHER (AFTER JQUERY) -->
+	<script src="js/language.js"></script>
+
+	<!-- CUSTOM THEME JS (AFTER EVERYTHING) -->
+	<script src="js/custom/custom.js"></script>
 </body>
 
 </html>
