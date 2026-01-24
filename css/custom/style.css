@@ -2310,8 +2310,32 @@ only screen and (min-resolution: 1.5dppx) {
     scrollbar-color: #888 #f1f1f1;
 	position: relative;
 }
+#scrollToTopBtn {
+    display: none; /* hidden by default */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    background-color: #005b95;
+    color: #fff;
+    border: none;
+    outline: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: background 0.3s;
+    
+    /* CENTER SVG */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-
+#scrollToTopBtn:hover {
+    background-color: #003f6b;
+}
 
 /* language css end  */
 /* html {

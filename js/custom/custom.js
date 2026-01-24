@@ -14,6 +14,30 @@ $(document).on('ready', function () {
     var top_nav = $('#top-nav');
     var menu_list = $('.navbar-nav'); // ✅ ADD THIS
 
+    // Scroll-to-top button functionality
+    var scrollBtn = $('#scrollToTopBtn');
+
+    // Function to toggle button visibility
+    function toggleScrollBtn() {
+        if ($(window).scrollTop() > 800) {
+            scrollBtn.fadeIn();
+        } else {
+            scrollBtn.fadeOut();
+        }
+    }
+
+    $(window).on('scroll', toggleScrollBtn);
+
+    // Run after full page load
+    $(window).on('load', toggleScrollBtn);
+
+    // Smooth scroll to top when button is clicked
+    scrollBtn.on('click', function () {
+        var distance = $(window).scrollTop();
+        var scrollDuration = Math.min(Math.max(distance / 2, 500), 1000); // proportional to distance
+        $('html, body').stop(true).animate({ scrollTop: 0 }, scrollDuration, 'swing');
+    });
+
     // MENU SCROLL (NO LAG)
     if (top_nav.length) {
         $(window).on('scroll', function () {
