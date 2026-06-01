@@ -158,7 +158,7 @@ $(document).on('ready', function () {
                         url: "mail/mail.php",
                         data: $(form).serialize(),
                         success: function (data) {
-                            if (data) {
+                            if (data.trim() === "success") {
                                 $(form)[0].reset();
                                 $('.sucessMessage').html('Mail Sent Successfully!!!');
                                 $('.sucessMessage').show();
