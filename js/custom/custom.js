@@ -153,28 +153,46 @@ $(document).on('ready', function () {
             $(this).validate({
                 errorClass: 'error',
                 submitHandler: function (form) {
-                    $.ajax({
-                        type: "POST",
-                        url: "mail/mail.php",
-                        data: $(form).serialize(),
-                        success: function (data) {
-                            if (data.trim() === "success") {
-                                $(form)[0].reset();
-                                $('.sucessMessage').html('Mail Sent Successfully!!!');
-                                $('.sucessMessage').show();
-                                $('.sucessMessage').delay(3000).fadeOut();
-                            } else {
-                                $('.failMessage').html(data);
-                                $('.failMessage').show();
-                                $('.failMessage').delay(3000).fadeOut();
-                            }
-                        },
-                        error: function (XMLHttpRequest, textStatus, errorThrown) {
-                            $('.failMessage').html(textStatus);
-                            $('.failMessage').show();
-                            $('.failMessage').delay(3000).fadeOut();
-                        }
-                    });
+
+                    // Prevent empty submits (extra safety)
+                    if (!form.checkValidity()) return false;
+
+                    var formData = {
+                        name: $(form).find('input[name="name"]').val(),
+                        phone: $(form).find('input[name="phone"]').val(),
+                        email: $(form).find('input[name="email"]').val(),
+                        message: $(form).find('textarea[name="message"]').val()
+                    };
+
+                    emailjs.send("service_mj2nwk9", "template_pas1zg2", formData)
+                        .then(function (response) {
+
+                            console.log("SUCCESS:", response.status, response.text);
+
+                            $(form)[0].reset();
+
+                            $('.sucessMessage')
+                                .html('✅ Mail Sent Successfully!')
+                                .fadeIn()
+                                .delay(3000)
+                                .fadeOut();
+
+                            $('.failMessage').hide();
+
+                        })
+                        .catch(function (error) {
+
+                            console.error("EmailJS Error:", error);
+
+                            $('.failMessage')
+                                .html('❌ Failed to send mail. Check console.')
+                                .fadeIn()
+                                .delay(3000)
+                                .fadeOut();
+
+                        });
+
+                    return false;
                 }
             });
         });

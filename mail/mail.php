@@ -1,14 +1,17 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $name    = $_POST['name'];
-    $email   = $_POST['email'];
-    $phone   = $_POST['phone'];
-    $message = $_POST['message'];
-
-    $to = "info@synorix.net";
-    $subject = "New Contact Form Message";
+    $name    = $_POST['name'] ?? '';
+    $email   = $_POST['email'] ?? '';
+    $phone   = $_POST['phone'] ?? '';
+    $message = $_POST['message'] ?? '';
 
     $body = "New Contact Form Submission\n\n";
     $body .= "Name: $name\n";
@@ -16,14 +19,32 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $body .= "Phone: $phone\n";
     $body .= "Message: $message\n";
 
-    $headers  = "From: Synorix Website <info@synorix.net>\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+    $mail = new PHPMailer(true);
 
-    if (mail($to, $subject, $body, $headers)) {
+    try {
+        $mail->isSMTP();
+        $mail->Host       = 'synorix.net';
+        $mail->SMTPAuth   = true;
+        $mail->Username   = 'info@synorix.net';
+        $mail->Password   = 'Enx3yZ<1x@%E?5Ze';
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port       = 465;
+
+        $mail->setFrom('info@synorix.net', 'Synorix Website');
+        $mail->addAddress('info@synorix.net');
+
+        if (!empty($email)) {
+            $mail->addReplyTo($email, $name);
+        }
+
+        $mail->Subject = 'New Contact Form Message';
+        $mail->Body    = $body;
+
+        $mail->send();
         echo "success";
-    } else {
-        echo "failed";
+
+    } catch (Exception $e) {
+        echo "failed: " . $mail->ErrorInfo;
     }
 }
+?>

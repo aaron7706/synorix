@@ -1949,17 +1949,19 @@
 						<div class="contact-form-head text-center">
 							<h3 data-i18n="SendMessage">SEND A MESSAGE</h3>
 						</div>
-						<form class="contact-form" method="post" action="mail/mail.php">
+						<form class="contact-form">
 
 							<div class="form-div form-div-left">
-								<input class="form-input" type="text" name="name" value="" data-i18n-placeholder="ENTER_YOUR_NAME"
-									placeholder="Enter Your Name" required autocomplete="off">
+								<input class="form-input" type="text" name="name" value=""
+									data-i18n-placeholder="ENTER_YOUR_NAME" placeholder="Enter Your Name" required
+									autocomplete="off">
 							</div>
 							<div class="col-sm-12 col-md-12 col-lg-12 no-pad">
 								<div class="row rowsafari">
 									<div class="col-sm-12 col-md-12 col-lg-6 form-pad-right25 clearfix">
 										<div class="form-div clearfix">
-											<input class="number-css form-input" type="text" name="phone" value="" data-i18n-placeholder="ENTER_YOUR_NUMBER"
+											<input class="number-css form-input" type="text" name="phone" value=""
+												data-i18n-placeholder="ENTER_YOUR_NUMBER"
 												placeholder="Enter Your Number" required autocomplete="off"
 												onkeypress="return isNumber(event)">
 										</div>
@@ -1967,8 +1969,8 @@
 									<div class="col-sm-12 col-md-12 col-lg-6 form-pad-left25 clearfix">
 										<div class="form-div clearfix">
 											<input class="form-input" type="email" name="email" value=""
-												data-i18n-placeholder="ENTER_YOUR_EMAIL" placeholder="Enter Your Email" required
-												autocomplete="off">
+												data-i18n-placeholder="ENTER_YOUR_EMAIL" placeholder="Enter Your Email"
+												required autocomplete="off">
 										</div>
 									</div>
 								</div>
@@ -2220,6 +2222,14 @@
 
 	<!-- LANGUAGE SWITCHER (AFTER JQUERY) -->
 	<script src="js/language.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+	<script>
+		(function () {
+			emailjs.init("pohMpEyVNCkva9WOT");
+		})();
+	</script>
 
 	<!-- CUSTOM THEME JS (AFTER EVERYTHING) -->
 	<script src="js/custom/custom.js"></script>
